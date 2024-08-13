@@ -1,0 +1,61 @@
+/* public/message/styles.css */
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.message-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #001f3d;
+    text-align: center;
+}
+
+h1 {
+    color: #0082e6;
+    margin-bottom: 20px; /* Adiciona espaço abaixo do título */
+}
+
+#message-content {
+    font-size: 1.2em;
+    color: #ccc;
+    margin-top: 10px; /* Adiciona espaço acima do conteúdo */
+}
+
+.back-to-home {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #0082e6;
+    color: #ccc;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.back-to-home:hover {
+    background-color: #045174;
+}
+
+.success-image {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px; /* Espaço abaixo da imagem */
+    border-radius: 50%; /* Bordas arredondadas para a imagem */
+    object-fit: cover; /* Garante que a imagem se ajuste bem ao espaço */
+    animation: float 1.0s ease-in-out infinite; /* Adiciona a animação de flutuação */
+    border: 5px solid #0082e6;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0); /* Posição inicial e final */
+    }
+    50% {
+        transform: translateY(-10px); /* Eleva a imagem 10px no meio da animação */
+    }
+}
