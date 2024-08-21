@@ -1,10 +1,11 @@
 // Função para fazer a rolagem suave até o topo da página
-document.querySelector('.back-to-top').addEventListener('click', function() {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('.back-to-top').addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
     });
-});
 
 // Mostrar ou ocultar a seta conforme o usuário rola a página
 window.addEventListener('scroll', function() {
