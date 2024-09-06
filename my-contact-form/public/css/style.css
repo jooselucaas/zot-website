@@ -307,6 +307,7 @@
         }
         
         #servicos .linha .servicos p {
+            text-align: justify;
             font-size: 14px;
             line-height: 22px;
         }
