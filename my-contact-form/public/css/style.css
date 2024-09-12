@@ -358,11 +358,15 @@
         }
         
         .box-diferenciais{
-            box-shadow: 0px 20px 40px #2426721C;
+            box-shadow: 0px 0px 50px #2426721C;
             width:31%;
-            margin-right: 2%;
+            margin-right: 3%;
             padding:10px 20px;
             border-radius:10px;
+        }
+
+        .box-diferenciais:first-child{
+            margin-left: 3%;
         }
         
         .box-diferenciais h3{
@@ -720,12 +724,16 @@
                
             }
             .box-diferenciais{
-                margin-top: 3%;
                 margin-left: 10%;
+                margin-top: 3%
                 width:80%;
                 margin-right: 0;
                 display: inline-block;
                 text-align: center;
+            }
+
+            .box-diferenciais:first-child{
+                margin-left: 10%;
             }
 
 
