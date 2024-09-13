@@ -10,14 +10,13 @@
             height: 100%;
         }
 
-        /* *******************/
-        /* seção I N I C I O */
-        /* *******************/
-
         body {
             font-family: 'Montserrat';
             height: 100%;
         }
+
+
+        /* Estiliza o contêiner centralizado do menu */
         .center {
             width: 100%;
             height: 80px;
@@ -29,7 +28,8 @@
             width: 80%;
             margin: 0 auto;
         }
-        
+
+        /* Estiliza o rótulo do logo */
         label.logo{
             color: white;
             font-size: 35px;
@@ -57,13 +57,15 @@
             border-radius: 3px;
             
         }
-        
+
+        /* Estiliza o estado ativo e o hover dos links */
         .active,ul a:hover {
             background: #1b9bff;
             color: white;
             transition: .5s;
         }
-        
+
+        /* Estiliza o botão de menu */
         .checkbtn {
             font-size: 30px;
             color: white;
@@ -72,11 +74,13 @@
             margin-right: 40px;
             cursor: pointer;
         }
-        
+
+        /* Inicialmente oculta o ícone de fechar do menu */
         #closeIcon {
-            display: none; /* Inicialmente oculto */
+            display: none;
         }
-        
+
+        /* Mostra e oculta os ícones do menu com base no estado do checkbox */
         #check:checked ~ .checkbtn #menuIcon {
             display: none; /* Oculta o ícone de "hamburguer" quando o menu está aberto */
         }
@@ -85,10 +89,12 @@
             display: inline; /* Exibe o ícone de "X" quando o menu está aberto */
         }
 
+        /* Oculta o checkbox do menu */
         #check {
             display: none;
         }
 
+        /* Estiliza o botão de voltar ao topo */
         .back-to-top {
             position: fixed;
             bottom: 50px;
@@ -103,12 +109,16 @@
             font-size: 24px;
             display: none; /* Inicialmente oculto */
         }
-        
+
+        /* Estiliza o botão de voltar ao topo ao passar o mouse */
         .back-to-top:hover {
             background-color: white;
             color: #001F3D;
             border: 1px solid #001F3D;
         }
+
+
+        /* seção INICIO */
 
 
         #inicio {
@@ -173,6 +183,13 @@
 
         }
 
+
+        /* fim seção INICIO */
+
+
+        /* seção QUEM SOMOS NÓS? */
+
+
         #quem-somos {
             background-color: #f3f3f3;
             padding: 100px 15px;
@@ -236,6 +253,13 @@
             color: #001F3D;
             text-align: left;
         }
+
+
+        /* fim seção QUEM SOMOS NÓS? */
+
+
+        /* seção SERVIÇOS */
+
 
         #servicos {
             cursor: pointer;
@@ -315,9 +339,12 @@
             color: #001F3D; 
           }
 
-        /* *********************/
-        /* seção S K I L L S */
-        /* *********************/
+
+        /* fim seção SERVIÇOS */
+
+
+        /* seção PORQUE NÓS? */
+
 
         section#porque-nos{
             background-color: #f3f3f3;
@@ -382,9 +409,12 @@
             margin-bottom: 20px;
         }
 
-        /* *********************/
-        /* seção S K I L L S */
-        /* *********************/
+
+        /* fim seção PORQUE NÓS? */
+
+
+        /* seção SKILLS */
+
         
         .container-skills {
             background: linear-gradient( #001F3D, rgba(33, 16, 16, 0.8)), url("../images/foto-de-fundo.jpg");
@@ -485,11 +515,13 @@
                 width: 85%;
             }
         }
+
+
+        /* fim seção SKILLS */
         
 
-        /* *********************/
-        /* seção M E U S  P R O J E T O S */
-        /* *********************/
+        /* seção MEUS PROJETOS */
+
         
         #portifolio {
             max-width: 1100px;
@@ -556,9 +588,11 @@
         }
 
 
-        /* *******************/
-        /* seção C O N T A T O */
-        /* *******************/
+        /* fim seção MEUS PROJETOS */
+
+
+        /* seção CONTATO */
+
         
         #contato {
             padding: 100px 15px;
@@ -622,7 +656,13 @@
             color: #fff;
         }
 
+
+        /* fim seção CONTATO */
         
+
+        /* seção FOOTER */
+
+
         footer {
             background-color: #001F3D;
             color: #fff;
@@ -644,22 +684,35 @@
         }
 
 
-        /* *******************/
+        /* fim seção FOOTER */
+
+
         /* RESPONSIVIDADE DO S I T E */
-        /* *******************/
+
+
+        @media only screen and (max-width: 500px) {
+
+            /* No tamanho de tela de 500px a font-size do H2 vai pra 37px */
+            #inicio .apresentacao h2 {
+                font-size: 37px;
+            }
+            /* ... */
+        }
 
 
         @media only screen and (max-width: 690px) {
 
-            /* seção I N I C I O */
+            /* seção INICIO */
             #inicio .container .apresentacao h2 {
                 font-size: 40px;
             }
             #inicio .container .apresentacao .bemvindo {
                 font-size: 17px;
             }
+            /* fim seção INICIO */
+
             
-            /* seção M E U S  P R O J E T O S */
+            /* seção MEUS PROJETOS */
             #portifolio {
                 padding: 50px 0;
             }
@@ -669,8 +722,10 @@
             #portifolio .linha .projeto {
                 margin: 10px auto;
             }
+            /* fim seção MEUS PROJETOS */
 
-            /* seção C O N T A T O */
+
+            /* seção CONTATO */
             #contato {
                 padding: 50px 15px;
             }
@@ -682,128 +737,20 @@
                 width: 100%;
                 margin-bottom: 15px;
             }
+            /* fim seção CONTATO */
 
+
+            /* Aqui ajusta o layout das caixas da seção "Por Que Nós?" para telas pequenas */
             section#porque-nos .center .box-diferenciais {
-                display: inline-block;
-                text-align: center;
+                display: inline-block; /* Alinha as caixas horizontalmente para telas pequenas */
+                text-align: center; /* Centraliza o texto dentro de cada caixa */
             }
-
+            /* ... */
         }
-
-       
-
-        @media only screen and (max-width: 500px) {
-            #inicio .apresentacao h2 {
-                font-size: 37px;
-            }
-        }
-
-        @media (max-width:900px){
-            label.logo {
-                font-size: 30px;
-                padding-left: 50px;
-            }
-        
-            nav ul li a {
-                font-size: 16px;
-            }
-
-            /* seção MINHAS HABLIDADES */
-            .container-skills {
-                padding: 50px 20px;
-            }
-
-            .lista-beneficios,.img-beneficios{
-                width:100%;
-                margin-bottom: 30px;
-            }
-            .diferenciais{
-    
-                flex-wrap: wrap;
-               
-            }
-            .box-diferenciais{
-                margin-left: 10%;
-                margin-top: 3%;
-                width:80%;
-                margin-right: 0;
-                display: inline-block;
-                text-align: center;
-            }
-
-            .box-diferenciais:first-child{
-                margin-left: 10%;
-            }
-
-            section#porque-nos {
-                height: 1470px;
-                min-height: 1470px;
-            }
-
-            section#porque-nos .center > h2 {
-                font-size: 50px;
-            }
-
-            p {
-                padding: 2%;
-            }
-        }
-
-        @media (max-width:1020px){
-            .checkbtn {
-                display: block;
-            }
-        
-            nav ul {
-                position: absolute;
-                width: 100%;
-                height: 500px;
-                min-height: 500px;
-                background: #001F3D;
-                top: 80px;
-                left: -100%;
-                text-align: center;
-                transition: all .5s;
-                border-top: 1px solid #0082e6;
-                
-            }
-        
-            nav ul li {
-                display: block;
-                margin: 50px 0;
-                line-height: 30px;
-            }
-        
-            nav ul li a {
-                font-size: 20px;
-            }
-        
-            a:hover,a.active {
-                background: none;
-                color: #0082e6;
-            }
-        
-            #check:checked ~ ul {
-                left: 0;
-            }
-        }
-
-        @media (max-width:1036px) {
-            nav {
-                width: 100%;
-                padding: 0 50px;
-            }
-        }
-
-        @media (min-width:1020px) {
-            label.checkbtn {
-                display: none;
-            }
-        }
-
 
 
         @media screen and (max-width: 800px) {
+
             /* seção MEUS SERVIÇOS */
             #servicos {
                 padding: 50px 15px;
@@ -814,11 +761,17 @@
             #servicos .linha .servicos {
                 margin: 10px auto;
             }
+            /* fim seção MEUS SERVIÇOS */
+
+
             /* seção MINHAS HABLIDADES */
             .container-skills {
                 padding: 50px 20px;
             }
+            /* fim seção MINHAS HABLIDADES */
 
+
+            /* seção QUEM SOMOS NÓS */
             #quem-somos h2 {
                 font-size: 50px;
             }
@@ -836,42 +789,227 @@
                 text-align: left;
                 padding-left: 2.5%;
             }
+            /* fim seção QUEM SOMOS NÓS */
+            
         }
+
         
-        @media screen and (max-width: 1100px) {
-            #quem-somos .container-quem-somos {
-                flex-direction: column;
+        @media screen and (min-width: 750px) and (max-width: 900px) {
+
+            /* Aqui ajusta a altura da seção "Por Que Nós?" para telas de tamanho médio (entre 750px e 900px de largura) */
+            section#porque-nos {
+                margin-bottom: -150px;
+            }
+            /* ... */
+          }
+
+
+        @media (max-width:900px){
+
+            /* Reduz o tamanho da fonte e adiciona padding à esquerda no logo */
+            label.logo {
+                font-size: 30px;
+                padding-left: 50px;
+            }
+            /* ... */
+
+        
+            /* Reduz o tamanho da fonte dos links de navegação */
+            nav ul li a {
+                font-size: 16px;
+            }
+            /* ... */
+
+
+            /* seção MINHAS HABLIDADES */
+            .container-skills {
+                padding: 50px 20px;
+            }
+            /* fim seção MINHAS HABLIDADES */
+
+
+            /* Configura a largura e a margem inferior para listas e imagens de benefícios OBSERVAÇÃO */ 
+            .lista-beneficios,.img-beneficios{
+                width:100%;
+                margin-bottom: 30px;
+            }
+            /* ... */
+
+
+            /* Configura o comportamento de flexbox para o contêiner de diferenciais */
+            .diferenciais{
+                flex-wrap: wrap; /* Permite que os itens dentro do contêiner se movam para a linha seguinte se não couberem na linha atual */
+            }
+            /* ... */
+
+
+            /* Configura a exibição e o alinhamento dos itens individuais de diferenciais */
+            .box-diferenciais{
+                margin-left: 10%;
+                margin-top: 3%;
+                width:80%;
+                margin-right: 0;
+                display: inline-block;
                 text-align: center;
             }
+            /* ... */
+
+
+            /* Ajusta a margem esquerda do primeiro item de diferenciais */
+            .box-diferenciais:first-child{
+                margin-left: 10%;
+            }
+            /* ... */
+
+
+            /* Define a altura mínima e a altura fixa para a seção 'porque-nos' */
+            section#porque-nos {
+                height: 1470px;
+                min-height: 1470px;
+            }
+            /* ... */
+
+
+            /* Ajusta o tamanho da fonte do título na seção 'porque-nos' */
+            section#porque-nos .center > h2 {
+                font-size: 50px;
+            }
+            /* ... */
+
+
+            /* Adiciona padding ao redor dos parágrafos */
+            p {
+                padding: 2%;
+            }
+            /* ... */
+        }
+
+
+        @media (max-width:1020px){
+
+            /* Exibe o botão de menu em telas menores */
+            .checkbtn {
+                display: block;
+            }
+            /* ... */
+
+
+            /* Estiliza o menu de navegação */
+            nav ul {
+                position: absolute;
+                width: 100%;
+                height: 500px;
+                min-height: 500px;
+                background: #001F3D;
+                top: 80px;
+                left: -100%;
+                text-align: center;
+                transition: all .5s;
+                border-top: 1px solid #0082e6;
+            }
+            /* ... */
         
+
+            /* Estiliza os itens do menu */
+            nav ul li {
+                display: block;
+                margin: 50px 0;
+                line-height: 30px;
+            }
+            /* ... */
+        
+
+            /* Estiliza os links dentro dos itens do menu */
+            nav ul li a {
+                font-size: 20px;
+            }
+            /* ... */
+        
+
+             /* Estiliza o efeito ao passar o mouse ou quando o link está ativo */
+            a:hover,a.active {
+                background: none;
+                color: #0082e6;
+            }
+            /* ... */
+        
+
+            /* Exibe o menu quando o checkbox é marcado */
+            #check:checked ~ ul {
+                left: 0;
+            }
+            /* ... */
+        }
+
+
+        @media (min-width:1020px) {
+
+            /* Oculta o botão de menu em telas maiores */
+            label.checkbtn {
+                display: none;
+            }
+            /* ... */
+        }
+
+
+        @media (max-width:1036px) {
+
+             /* Ajusta o estilo do elemento de navegação */
+            nav {
+                width: 100%;
+                padding: 0 50px;
+            }
+            /* ... */
+        }
+
+
+        @media screen and (max-width: 1100px) {
+
+             /* Ajusta o layout do container dentro da seção #quem-somos */
+            #quem-somos .container-quem-somos {
+                flex-direction: column;  /* Altera a direção dos itens flexíveis para coluna */
+                text-align: center;
+            }
+            /* ... */
+
+        
+             /* Ajusta a margem inferior da imagem na seção #quem-somos */
             #quem-somos .imagem-quem-somos {
                 margin-bottom: 50px;
             }
-        
+            /* ... */
+
+
+             /* Ajusta o tamanho flexível do texto na seção #quem-somos */
             #quem-somos .texto-quem-somos {
-                flex-basis: auto;
+                flex-basis: auto; /* Define a base do flex para se ajustar automaticamente */
             }
+            /* ... */
         }
 
+
+        /* Aplica uma animação de flutuação ao elemento com a classe .logo */
         .logo {
             animation: float 2s ease-in-out infinite;
           }
-          
+        /* ... */
+
+
+          /* Define a animação 'float' que faz o elemento se mover verticalmente */
           @keyframes float {
             0% {
-              transform: translateY(0);
+              transform: translateY(0); /* No início da animação, o elemento está na posição original */
             }
             50% {
-              transform: translateY(-10px);
+              transform: translateY(-10px); /* No meio da animação, o elemento se move 10 pixels para cima */
             }
             100% {
-              transform: translateY(0);
+              transform: translateY(0); /* No final da animação, o elemento retorna à posição original */
             }
+            /* ... */
           }
 
-          @media screen and (min-width: 750px) and (max-width: 900px) {
-            section#porque-nos {
-                height: 1300px;
-                min-height: 1300px;
-            }
-          }
+
+        /* fim RESPONSIVIDADE DO S I T E */  
+          
+          
