@@ -737,8 +737,8 @@
             }
 
             section#porque-nos {
-                height: 1400px;
-                min-height: 1400px;
+                height: 1470px;
+                min-height: 1470px;
             }
 
             section#porque-nos .center > h2 {
@@ -832,6 +832,7 @@
             }
 
             #quem-somos {
+                padding: 50px 15px;
                 text-align: center;
             }
 
