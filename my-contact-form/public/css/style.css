@@ -757,8 +757,8 @@
             nav ul {
                 position: absolute;
                 width: 100%;
-                height: 480px;
-                min-height: 480px;
+                height: 500px;
+                min-height: 500px;
                 background: #001F3D;
                 top: 80px;
                 left: -100%;
@@ -869,4 +869,9 @@
             }
           }
 
-        
+          @media screen and (min-width: 750px) and (max-width: 900px) {
+            section#porque-nos {
+                height: 1300px;
+                min-height: 1300px;
+            }
+          }
