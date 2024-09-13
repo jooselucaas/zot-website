@@ -174,7 +174,6 @@
         }
 
         #quem-somos {
-            cursor: pointer;
             background-color: #f3f3f3;
             padding: 100px 15px;
             text-align: center;
@@ -869,4 +868,5 @@
               transform: translateY(0);
             }
           }
+
         
