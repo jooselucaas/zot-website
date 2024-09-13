@@ -725,7 +725,7 @@
             }
             .box-diferenciais{
                 margin-left: 10%;
-                margin-top: 3%
+                margin-top: 3%;
                 width:80%;
                 margin-right: 0;
                 display: inline-block;
@@ -735,7 +735,6 @@
             .box-diferenciais:first-child{
                 margin-left: 10%;
             }
-
 
             section#porque-nos {
                 height: 1400px;
